@@ -6,7 +6,7 @@
 /*   By: eperaita <eperaita@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 11:18:10 by eperaita          #+#    #+#             */
-/*   Updated: 2021/11/22 12:41:11 by eperaita         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:31:49 by eperaita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -26,9 +26,9 @@ int	mousehook(int mouse, int x, int y, t_var *var)
 
 int	keyhook(int key, t_var *var)
 {
-	if (key == 126)
-		move(var, 0, -1 * var->fractal.ytotal / 20);
 	if (key == 125)
+		move(var, 0, -1 * var->fractal.ytotal / 20);
+	if (key == 126)
 		move(var, 0, var->fractal.ytotal / 20);
 	if (key == 123)
 		move(var, -1 * var->fractal.xtotal / 20, 0);
